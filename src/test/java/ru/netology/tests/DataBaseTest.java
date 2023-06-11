@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.netology.data.SQLHelper.cleanDatabase;
+
 
 
 public class DataBaseTest {
@@ -25,7 +25,7 @@ public class DataBaseTest {
 
     @AfterAll
     static void removeAll() {
-        SelenideLogger.removeListener("allure"); //cleanDatabase();
+        SelenideLogger.removeListener("allure");
     }
 
     @Test

@@ -13,8 +13,8 @@ public class SQLHelper {
 
     static QueryRunner runner = new QueryRunner();
     //static String url = System.getProperty("db.url");
-    //static String url = "jdbc:mysql://localhost:3306/app";
-    static String url = "jdbc:postgresql://localhost:5432/app";
+    static String url = "jdbc:mysql://localhost:3306/app";
+    //static String url = "jdbc:postgresql://localhost:5432/app";
     static String userName = System.getProperty("db.username");
     static String password = System.getProperty("db.password");
 
@@ -61,13 +61,5 @@ public class SQLHelper {
             exception.printStackTrace();
         }
         return null;
-    }
-
-    @SneakyThrows
-    public static void cleanDatabase() {
-        var conn = getConn();
-        runner.execute(conn, "DELETE FROM order_entity");
-        runner.execute(conn, "DELETE FROM payment_entity");
-        runner.execute(conn, "DELETE FROM credit_request_entity");
     }
 }
