@@ -27,9 +27,13 @@
 
 **2. Запустить IntelliJ IDEA**
 
-**3. Клонировать репозиторий с дипломным проектом на удаленный сервер командой из консоли IntelliJ IDEA:**
-
+**3. Клонировать репозиторий с дипломным проектом на удаленный сервер командой из IntelliJ IDEA:**
+* Открыть приложение IntelliJ IDEA
+* Нажать на кнопку `Get From VCS`
+![Welcome to IntelliJ IDEA 2023-06-11 16 31 52](https://github.com/AleksandrMukhin/QA_Diploma_project/assets/120710840/04412033-6de8-48bc-9d14-ad880b0ffda1)
+* В открывшимся окне в поле `URL` ввести: 
 `git clone https://github.com/AleksandrMukhin/QA_Diploma_project.git`
+* Нажать кнопку `clone`
 
 **4. В терминале IntelliJ IDEA для запуска контейнеров ввести команду:** `docker-compose up`
 
