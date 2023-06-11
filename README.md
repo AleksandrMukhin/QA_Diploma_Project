@@ -15,13 +15,14 @@
 **[Отчётные документы по итогам автоматизации](https://github.com/AleksandrMukhin/QA_Diploma_project/blob/main/documentation/Summary.md)**
 
 ## Процедура запуска автотестов
-**Предварительные условия:**
+### Предварительные условия:
 1. Установить [Docker Desktop](https://docs.docker.com/desktop/) на локальной машине
 2. Установить среду разрабоки [IntelliJ IDEA](https://www.jetbrains.com/ru-ru/idea/download/#section=windows) для вашей ОС
 3. Установить плагины для работы с БД из IntelliJ IDEA: [Database navigation](https://plugins.jetbrains.com/plugin/1800-database-navigator) 
 4. Установить на локальной машине [Git](https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-Git)
 
-## Запуск приложения, тестов и отчета
+### Запуск приложения, тестов и отчета:
+
 **1. Запустить приложение Docker Desktop и войти в свою учетную запись**
 
 **2. Запустить IntelliJ IDEA**
