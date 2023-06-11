@@ -109,7 +109,7 @@ public class CreditTest {
         var lastYear = Integer.parseInt(DataGenerator.getCurrentYear()) - 1;
         var cardInfo = DataGenerator.getDataWithApprovedCardAndMonthAndYear(currentMonth, String.valueOf(lastYear));
         creditPage.enterValidCardDetailsForBankToPurchaseOnCredit(cardInfo);
-        creditPage.checkWarningUnderYearField("Истёк срок действия карты");
+        creditPage.checkWarningUnderYearField("Неверно указан срок действия карты");
     }
 
     @Test
@@ -175,7 +175,7 @@ public class CreditTest {
         var creditPage = page.openCreditPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("&|#{}№@!");
         creditPage.enterValidCardDetailsForBankToPurchaseOnCredit(cardInfo);
-        creditPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод спецсимволов.");
+        creditPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test
@@ -184,7 +184,7 @@ public class CreditTest {
         var creditPage = page.openCreditPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("Александр Пушкин");
         creditPage.enterValidCardDetailsForBankToPurchaseOnCredit(cardInfo);
-        creditPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод значений на кирилице.");
+        creditPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test
@@ -193,7 +193,7 @@ public class CreditTest {
         var creditPage = page.openCreditPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("Pushkin 12345");
         creditPage.enterValidCardDetailsForBankToPurchaseOnCredit(cardInfo);
-        creditPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод цифр.");
+        creditPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test

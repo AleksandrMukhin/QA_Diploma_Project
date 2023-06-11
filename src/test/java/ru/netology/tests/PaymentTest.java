@@ -113,7 +113,7 @@ public class PaymentTest {
         var cardInfo = DataGenerator.getDataWithApprovedCardAndMonthAndYear(currentMonth,
                 String.valueOf(lastYear));
         paymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        paymentPage.checkWarningUnderYearField("Истёк срок действия карты");
+        paymentPage.checkWarningUnderYearField("Неверно указан срок действия карты");
     }
 
     @Test
@@ -182,7 +182,7 @@ public class PaymentTest {
         var paymentPage = page.openPaymentPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("&|#{}№@!");
         paymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        paymentPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод спецсимволов.");
+        paymentPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test
@@ -191,7 +191,7 @@ public class PaymentTest {
         var paymentPage = page.openPaymentPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("Александр Пушкин");
         paymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        paymentPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод значений на кирилице.");
+        paymentPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test
@@ -200,7 +200,7 @@ public class PaymentTest {
         var paymentPage = page.openPaymentPage();
         var cardInfo = DataGenerator.getDataWithCardOwnerName("Pushkin 12345");
         paymentPage.insertValidPaymentCardDataForBank(cardInfo);
-        paymentPage.checkWarningUnderCardOwnerField("Ошибка! Не допускается ввод цифр.");
+        paymentPage.checkWarningUnderCardOwnerField("Неверный формат");
     }
 
     @Test
