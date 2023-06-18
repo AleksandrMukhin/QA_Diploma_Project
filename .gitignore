@@ -8,7 +8,7 @@ Thumbs.db*
 HELP.md
 .gradle
 build/
-data
+data/
 
 ### STS ###
 .apt_generated
