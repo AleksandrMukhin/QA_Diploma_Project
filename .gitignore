@@ -1,8 +1,7 @@
 .DS_Store*
 node_modules
 target
-data
-
+data/
 
 Thumbs.db*
 .DS_Store
