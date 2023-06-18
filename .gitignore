@@ -1,6 +1,7 @@
 .DS_Store*
 node_modules
 target
+data
 
 
 Thumbs.db*
@@ -8,7 +9,7 @@ Thumbs.db*
 HELP.md
 .gradle
 build/
-data/
+
 
 ### STS ###
 .apt_generated
