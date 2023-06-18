@@ -2,6 +2,7 @@
 node_modules
 target
 data/
+data/mysql
 
 Thumbs.db*
 .DS_Store
