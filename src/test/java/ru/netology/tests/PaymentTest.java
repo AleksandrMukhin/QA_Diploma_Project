@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class PaymentTest {
 
-    DashboardPage page = open("http://localhost:8080/", DashboardPage.class);
+    DashboardPage page = open(System.getProperty("sut.url"), DashboardPage.class);
 
     @BeforeAll
     static void setUpAll() {

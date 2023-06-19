@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 public class APIHelper {
 
     public static RequestSpecification requestSpec = new RequestSpecBuilder()
-            .setBaseUri("http://localhost")
+            .setBaseUri(System.getProperty("sut.url"))
             .setPort(8080)
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.JSON)

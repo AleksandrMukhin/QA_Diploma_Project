@@ -76,7 +76,7 @@ public class DataBaseTest {
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         var paymentCardData = SQLHelper.getDebitCardData();
-        String dateFromDB = paymentCardData.getCreated();
+        var dateFromDB = paymentCardData.getCreated();
         var dateDB = dateFromDB.substring(0, dateFromDB.length() - 10);
         assertEquals(formatForDateNow.format(dateNow), dateDB);
     }
@@ -89,7 +89,7 @@ public class DataBaseTest {
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         var creditCardData = SQLHelper.getCardDataWhenBuyingOnCredit();
-        String dateFromDB = creditCardData.getCreated();
+        var dateFromDB = creditCardData.getCreated();
         var dateDB = dateFromDB.substring(0, dateFromDB.length() - 10);
         assertEquals(formatForDateNow.format(dateNow), dateDB);
     }
@@ -102,7 +102,7 @@ public class DataBaseTest {
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         var paymentCardData = SQLHelper.getDebitCardData();
-        String dateFromDB = paymentCardData.getCreated();
+        var dateFromDB = paymentCardData.getCreated();
         var dateDB = dateFromDB.substring(0, dateFromDB.length() - 10);
         assertEquals(formatForDateNow.format(dateNow), dateDB);
     }
@@ -115,7 +115,7 @@ public class DataBaseTest {
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         var creditCardData = SQLHelper.getCardDataWhenBuyingOnCredit();
-        String dateFromDB = creditCardData.getCreated();
+        var dateFromDB = creditCardData.getCreated();
         var dateDB = dateFromDB.substring(0, dateFromDB.length() - 10);
         assertEquals(formatForDateNow.format(dateNow), dateDB);
     }

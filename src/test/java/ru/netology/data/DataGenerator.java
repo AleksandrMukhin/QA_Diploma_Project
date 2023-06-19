@@ -11,9 +11,9 @@ public class DataGenerator {
 
     public static Faker faker = new Faker(new Locale("en"));
 
-    public static int validYear = Integer.parseInt(getCurrentYear()) + 1;
-    public static String ApprovedCard = "4444 4444 4444 4441";
-    public static String DeclinedCard = "4444 4444 4444 4442";
+    private static int validYear = Integer.parseInt(getCurrentYear()) + 1;
+    private static String ApprovedCard = "4444 4444 4444 4441";
+    private static String DeclinedCard = "4444 4444 4444 4442";
 
 
     public static CardInfo getDataWithApprovedCard() {
@@ -62,7 +62,7 @@ public class DataGenerator {
             currentYear = currentYear - 1;
         } else currentMonth = currentMonth - 1;
 
-        String minusOneFromCurrentMonth = "";
+        var minusOneFromCurrentMonth = "";
         if (currentMonth < 10) {
             minusOneFromCurrentMonth = "0" + currentMonth;
         }
@@ -80,7 +80,7 @@ public class DataGenerator {
             preMaxMonth = 12;
             maxYear = maxYear - 1;
         } else preMaxMonth = currentMonth - 1;
-        String strPreMaxMonth = "";
+        var strPreMaxMonth = "";
         if (preMaxMonth < 10) {
             strPreMaxMonth = "0" + preMaxMonth;
         }
@@ -90,13 +90,13 @@ public class DataGenerator {
 
     public static String getCurrentMonth() {
         LocalDate date = LocalDate.now();
-        String currentMonth = date.format(DateTimeFormatter.ofPattern("MM"));
+        var currentMonth = date.format(DateTimeFormatter.ofPattern("MM"));
         return currentMonth;
     }
 
     public static String getCurrentYear() {
         LocalDate date = LocalDate.now();
-        String currentYear = date.format(DateTimeFormatter.ofPattern("yy"));
+        var currentYear = date.format(DateTimeFormatter.ofPattern("yy"));
         return currentYear;
     }
 
@@ -104,11 +104,11 @@ public class DataGenerator {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class CardInfo {
-        String number;
-        String month;
-        String year;
-        String holder;
-        String cvc;
+         String number;
+         String month;
+         String year;
+         String holder;
+         String cvc;
     }
 
     @Data
